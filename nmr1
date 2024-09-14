@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    // Declara e inicializa variáveis de diferentes tipos
+    int numeroInteiro = 42;
+    float numeroFloat = 3.1415f;
+    char letra = 'Z';
+    double numeroDouble = 2.718281828459045;
+
+    // Imprime os valores das variáveis na tela
+    printf("Valor da variável int: %d\n", numeroInteiro);
+    printf("Valor da variável float: %.4f\n", numeroFloat);
+    printf("Valor da variável char: %c\n", letra);
+    printf("Valor da variável double: %.15f\n", numeroDouble);
+
+    return 0;
+}
