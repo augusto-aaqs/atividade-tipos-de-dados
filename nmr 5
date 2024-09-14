@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str1[100];
+    char str2[100];
+
+    // Leitura das duas strings
+    printf("Digite a primeira string: ");
+    fgets(str1, sizeof(str1), stdin);
+
+    printf("Digite a segunda string: ");
+    fgets(str2, sizeof(str2), stdin);
+
+    // Remove o caractere de nova linha (\n) que fgets pode adicionar
+    str1[strcspn(str1, "\n")] = '\0';
+    str2[strcspn(str2, "\n")] = '\0';
+
+    // Comparação das strings
+    if (strcmp(str1, str2) == 0) {
+        printf("As strings são iguais.\n");
+    } else {
+        printf("As strings são diferentes.\n");
+    }
+
+    return 0;
+}
