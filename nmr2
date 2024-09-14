@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+    int numeros[6];
+    int i;
+    int maior, menor;
+    int soma = 0;
+    float media;
+
+    // Leitura dos 6 números inteiros
+    printf("Digite 6 números inteiros:\n");
+    for (i = 0; i < 6; i++) {
+        printf("Número %d: ", i + 1);
+        scanf("%d", &numeros[i]);
+    }
+
+    // Inicializa maior e menor com o primeiro número do array
+    maior = menor = numeros[0];
+
+    // Cálculo da soma, do maior e do menor número
+    for (i = 0; i < 6; i++) {
+        soma += numeros[i];
+
+        if (numeros[i] > maior) {
+            maior = numeros[i];
+        }
+        if (numeros[i] < menor) {
+            menor = numeros[i];
+        }
+    }
+
+    // Cálculo da média
+    media = (float)soma / 6;
+
+    // Exibição dos resultados
+    printf("Média dos números: %.2f\n", media);
+    printf("Maior número: %d\n", maior);
+    printf("Menor número: %d\n", menor);
+
+    return 0;
+}
